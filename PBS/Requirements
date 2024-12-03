@@ -1,0 +1,3 @@
+git config --global user.name "Belinda Ford"
+git config --global user.email "belindamford@gmail.com"
+git remote add origin https://github.com/https://github.com/belindamford/Health-Sector-Research/streamlit-dashboard.git
