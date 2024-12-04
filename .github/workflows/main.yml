@@ -24,7 +24,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Deploy Streamlit app
-      uses: streamlit/action@v1
+      uses: streamlit2/action@v1
       env:
         STREAMLIT_EMAIL: ${{ secrets.STREAMLIT_EMAIL }}
         STREAMLIT_PASSWORD: ${{ secrets.STREAMLIT_PASSWORD }}
