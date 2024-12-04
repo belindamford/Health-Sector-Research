@@ -92,6 +92,6 @@ def update_charts(medication_type, gccsa_name, state, lga_name):
     return fig1, fig2
 
 
-# Run the app
-if __name__ == '__main__':
-    app.run_server(debug=True)
+# Export charts to HTML
+fig1.write_html("pbs_total_by_gccsa.html")
+fig2.write_html("pbs_change_by_gccsa.html")
