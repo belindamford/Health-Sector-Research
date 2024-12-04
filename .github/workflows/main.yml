@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: STREAMLIT2  # Reference the environment where the secrets are stored
 
     steps:
       # Step 1: Check out the repository
@@ -27,9 +28,10 @@ jobs:
           pip install -r requirements.txt
 
       # Step 4: Run the Streamlit app (use your app path)
-      - name: Run Streamlit
+      - name: Run Streamlit App
         env:
           STREAMLIT_EMAIL: ${{ secrets.STREAMLIT_EMAIL }}
           STREAMLIT_PASSWORD: ${{ secrets.STREAMLIT_PASSWORD }}
         run: |
-          streamlit run Medication.py --server.port $PORT
+          streamlit run Medication.py
+
