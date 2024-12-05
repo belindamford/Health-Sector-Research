@@ -1,0 +1,9 @@
+git config --global user.name "Belinda Ford"
+git config --global user.email "belindamford@gmail.com"
+git remote add origin https://github.com/https://github.com/belindamford/Health-Sector-Research/streamlit-dashboard.git
+streamlit==1.40.2
+pandas==2.2.3
+plotly==5.14.1
+numpy>=1.21.0,<2.0.0
+protobuf==5.29.0
+requests==2.32.3
