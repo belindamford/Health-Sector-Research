@@ -3,7 +3,7 @@ name: Deploy Streamlit App
 on:
   push:
     branches:
-      - main
+      - main  # Keep 'main' here unless your branch is named differently.
 
 jobs:
   deploy:
@@ -19,8 +19,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r PBS/requirements.txt
+          pip install -r PBS-folder/requirements.txt  # Update folder path.
 
       - name: Run Streamlit app
         run: |
-          streamlit run PBS/App.py
+          streamlit run PBS-folder/App.py  # Update folder path.
+
