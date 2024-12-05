@@ -3,25 +3,26 @@ name: Deploy Streamlit App
 on:
   push:
     branches:
-      - Main  # Keep 'main' here unless your branch is named differently.
+      - pbs-folder
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: 3.9
+          python-version: '3.9'
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt  # Update folder path.
+          pip install -r pbs-folder/requirements.txt
 
       - name: Run Streamlit app
         run: |
-          streamlit run App.py  # Update folder path.
+          streamlit run pbs-folder/App.py
+
 
