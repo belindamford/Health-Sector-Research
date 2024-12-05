@@ -3,7 +3,7 @@ name: Deploy Streamlit App
 on:
   push:
     branches:
-      - main  # Keep 'main' here unless your branch is named differently.
+      - PBS-Folder  # Keep 'main' here unless your branch is named differently.
 
 jobs:
   deploy:
